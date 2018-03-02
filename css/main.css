@@ -284,6 +284,10 @@ nav {
   display: inline-block;
   margin-top: 2rem; }
 
+.about-btn:hover {
+  background-color: #8a8989;
+  border-color: #8a8989; }
+
 .about-me h1 {
   text-align: center;
   font-size: 2.4rem;
@@ -417,6 +421,10 @@ textarea {
   border: none;
   padding: .5em 1.5em;
   color: #fff; }
+
+.button:hover {
+  background-color: #8a8989;
+  border-color: #8a8989; }
 
 .contact h1 {
   text-align: center;
