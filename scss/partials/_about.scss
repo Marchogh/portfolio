@@ -55,6 +55,7 @@
     .about-subtitle,
     .about-text {
         grid-column: image-end / port-end;
+        line-height: 1.7rem;
 
         @include mq-s {
             grid-column: port / port;

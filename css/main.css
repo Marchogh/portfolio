@@ -166,7 +166,8 @@ nav {
   position: absolute;
   left: 50%;
   margin-left: -30px;
-  bottom: 20px; }
+  bottom: 20px;
+  cursor: pointer; }
 
 .arrows path {
   stroke: #2994D1;
@@ -258,7 +259,8 @@ nav {
     align-self: end; }
   .about-subtitle,
   .about-text {
-    grid-column: image-end / port-end; }
+    grid-column: image-end / port-end;
+    line-height: 1.7rem; }
     @media (max-width: 60rem) {
       .about-subtitle,
       .about-text {
