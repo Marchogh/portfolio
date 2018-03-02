@@ -1,13 +1,19 @@
-.work h1 {
+.portfolio {
+    padding: 5rem 30rem;
+    background: #e8e8e8;
+}
+
+/* Portfolio h1 header */
+.portfolio-title {
     text-align: center;
     font-size: 2.4rem; 
-    color: #333333;
+    color: #000021;
     text-transform: uppercase;
     position: relative;
     padding-bottom: 18px;
 }
 
-.work h1:before {
+.portfolio-title:before {
     bottom: 0;
     width: 100px;
     padding: 4px 0 5px;
@@ -16,7 +22,7 @@
     border-color: #737373;
 }
 
-.work h1:after, .work h1:before {
+.portfolio-title:after, .portfolio-title:before {
     content: " ";
     position: absolute;
     left: 0;
@@ -24,9 +30,24 @@
     margin: 0 auto;
 }
 
-.work h1:after {
+.portfolio-title:after {
     bottom: 5px;
     width: 200px;
     height: 1px;
     background-color: #303030;
 }
+
+.container-portfolio {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5rem;
+
+}
+
+.portfolio-image {
+    padding-top: 3rem; 
+}
+
+
+
+ 
