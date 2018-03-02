@@ -1,0 +1,34 @@
+@mixin container($width: 90%, $max-width: 50em) {
+    width: $width;
+    margin: 0 auto;
+    max-width: $max-width;
+}
+
+@mixin clearfix {
+    &::after {
+    content: '';
+    display: block;
+    clear: both;
+    }
+}
+
+
+@mixin mq-m($width: 105rem) {
+    @media (max-width: $width) {
+        @content;
+    }
+}
+
+
+@mixin mq-s($width: 60rem) {
+    @media (max-width: $width) {
+        @content;
+    }
+}
+
+@mixin mq-xs($width: 40rem) {
+    @media (max-width: $width) {
+        @content;
+    }
+}
+
