@@ -1,0 +1,120 @@
+.about-me {
+    @include container;  
+    @include clearfix;  
+    margin-top: 5em;
+    margin-bottom: 5em;
+
+    p {
+        font-size: 1.3rem;
+    }
+}
+
+.about-img {
+    max-height: 25em;
+
+    @media (min-width: 42em) {
+    float: left;
+    margin-right: 1em;
+    }
+}
+
+.about-title {
+    margin-bottom: .25em;
+    color: #000021;
+    font-size: 2.8rem;
+}
+
+.about-subtitle {
+    margin: .5em 0;
+    color: #333333;
+    font-size: 1.8rem;
+}
+
+@supports (display: grid) {
+    .about-me {
+     display: grid;
+     grid-template-columns: [port-start] minmax(6em, 1fr) [name-start] minmax(6em, 1fr) [img-end] 2fr [port-end]; 
+     grid-column-gap: 1em;   
+    }
+
+    .about-img {
+        grid-column: port-start / img-end;
+        grid-row: 1 / 4;
+
+        @include mq-s {
+            grid-row: 1 / 2;
+        }
+    }
+
+    .about-title {
+        grid-column: name / port;
+        grid-row: 1 / 2;
+        align-self: end;
+    }
+
+    .about-subtitle,
+    .about-text {
+        grid-column: image-end / port-end;
+
+        @include mq-s {
+            grid-column: port / port;
+        }
+    }
+
+    .about-subtitle {
+        grid-row: 2/ 3;
+    }
+
+    .about-text {
+        grid-row: 3 / 4;
+    }
+}
+
+// Btn 
+.about-btn {
+    border-color: #000021;
+    background-color: #000021;
+    padding: .9rem 1.5rem;
+    color: #fff;
+    border: 2px solid transparent;
+    border-radius: 0;
+    font-size: 1rem;
+    line-height: 22px;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 2rem;
+}
+
+.about-me h1 {
+    text-align: center;
+    font-size: 2.4rem; 
+    color: #333333;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 18px;
+}
+
+.about-me h1:before {
+    bottom: 0;
+    width: 100px;
+    padding: 4px 0 5px;
+    border-style: solid;
+    border-width: 1px 0;
+    border-color: #737373;
+}
+
+.about-me h1:after, .about-me h1:before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.about-me h1:after {
+    bottom: 5px;
+    width: 200px;
+    height: 1px;
+    background-color: #303030;
+}
