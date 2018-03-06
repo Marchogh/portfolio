@@ -28,6 +28,12 @@ nav {
 
 }
 
+@include mq-s {
+  ul li a {
+      display: none;
+  }
+} 
+
 /* Hover nav */
 .hover a::before,
 .hover a::after {

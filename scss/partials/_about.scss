@@ -7,6 +7,7 @@
     p {
         font-size: 1.3rem;
     }
+
 }
 
 .about-img {
@@ -35,19 +36,26 @@
      display: grid;
      grid-template-columns: [port-start] minmax(6em, 1fr) [name-start] minmax(6em, 1fr) [img-end] 2fr [port-end]; 
      grid-column-gap: 1em;   
+    
+     @include mq-s {
+            display: flex;
+            flex-direction: column;
+        } 
+     
     }
 
     .about-img {
         grid-column: port-start / img-end;
         grid-row: 1 / 4;
 
-        @include mq-s {
-            grid-row: 1 / 2;
-        }
+         @include mq-s {
+            width: 30%;
+            text-align: center;
+        } 
     }
 
     .about-title {
-        grid-column: name / port;
+        grid-column: image-end / port;
         grid-row: 1 / 2;
         align-self: end;
     }
@@ -57,9 +65,6 @@
         grid-column: image-end / port-end;
         line-height: 1.7rem;
 
-        @include mq-s {
-            grid-column: port / port;
-        }
     }
 
     .about-subtitle {
@@ -117,11 +122,4 @@
     left: 0;
     right: 0;
     margin: 0 auto;
-}
-
-.about-me h1:after {
-    bottom: 5px;
-    width: 200px;
-    height: 1px;
-    background-color: #303030;
 }

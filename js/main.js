@@ -4,3 +4,8 @@ $('a').click(function(){
   }, 500);
   return false;
 });
+
+$('.menu-burger, .menu-items').on('click', function() {
+  $('.menu-bg, .menu-items, .menu-burger').toggleClass('fs');
+  $('.menu-burger').text() == "☰" ? $('.menu-burger').text('✕') : $('.menu-burger').text('☰');
+});

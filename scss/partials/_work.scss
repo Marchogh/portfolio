@@ -43,10 +43,21 @@
     grid-template-columns: 1fr 1fr;
     grid-gap: 5rem;
 
+    @include mq-s {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+    } 
 }
 
 .portfolio-image {
     padding-top: 3rem; 
+
+    @include mq-s {
+        width: 80%;
+        height: 80%;
+    } 
+ 
 }
 
 

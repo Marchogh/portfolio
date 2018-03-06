@@ -44,6 +44,10 @@ nav {
     text-decoration: none;
     padding: 0 1rem; }
 
+@media (max-width: 60rem) {
+  ul li a {
+    display: none; } }
+
 /* Hover nav */
 .hover a::before,
 .hover a::after {
@@ -246,14 +250,24 @@ nav {
     display: grid;
     grid-template-columns: [port-start] minmax(6em, 1fr) [name-start] minmax(6em, 1fr) [img-end] 2fr [port-end];
     grid-column-gap: 1em; }
+    @media (max-width: 60rem) {
+      .about-me {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column; } }
   .about-img {
     grid-column: port-start / img-end;
     grid-row: 1 / 4; }
     @media (max-width: 60rem) {
       .about-img {
-        grid-row: 1 / 2; } }
+        width: 30%;
+        text-align: center; } }
   .about-title {
-    grid-column: name / port;
+    grid-column: image-end / port;
     grid-row: 1 / 2;
     -ms-flex-item-align: end;
     align-self: end; }
@@ -261,10 +275,6 @@ nav {
   .about-text {
     grid-column: image-end / port-end;
     line-height: 1.7rem; }
-    @media (max-width: 60rem) {
-      .about-subtitle,
-      .about-text {
-        grid-column: port / port; } }
   .about-subtitle {
     grid-row: 2/ 3; }
   .about-text {
@@ -311,12 +321,6 @@ nav {
   right: 0;
   margin: 0 auto; }
 
-.about-me h1:after {
-  bottom: 5px;
-  width: 200px;
-  height: 1px;
-  background-color: #303030; }
-
 .portfolio {
   background: #e8e8e8;
   padding: 1vw 10vw; }
@@ -355,9 +359,25 @@ nav {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 5rem; }
+  @media (max-width: 60rem) {
+    .container-portfolio {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; } }
 
 .portfolio-image {
   padding-top: 3rem; }
+  @media (max-width: 60rem) {
+    .portfolio-image {
+      width: 80%;
+      height: 80%; } }
 
 .contact {
   width: 90%;
