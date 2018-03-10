@@ -1,11 +1,31 @@
-$('a').click(function(){
-  $('html, body').animate({
-      scrollTop: $( $(this).attr('href') ).offset().top
-  }, 500);
-  return false;
+/* Smooth scroll */
+$('a[href^="#"]').on('click', function(event) {
+
+  var target = $(this.getAttribute('href'));
+
+  if( target.length ) {
+      event.preventDefault();
+      $('html, body').stop().animate({
+          scrollTop: target.offset().top
+      }, 600);
+  }
+
 });
 
-$('.menu-burger, .menu-items').on('click', function() {
-  $('.menu-bg, .menu-items, .menu-burger').toggleClass('fs');
-  $('.menu-burger').text() == "☰" ? $('.menu-burger').text('✕') : $('.menu-burger').text('☰');
-});
+/* Nav toggle */
+const navToggle = document.querySelector('.menu-button')
+const nav = document.querySelector('nav')
+const containerAll = document.querySelector('.container-all')
+
+const containerAllStyle = containerAll.style
+const bodyClassList = document.body.classList
+
+navToggle.addEventListener('click', _ => {
+  containerAllStyle.transition = 'transform 250ms ease-in-out'
+  bodyClassList.toggle('nav-is-open')
+})
+
+nav.addEventListener('click', _ => {
+  containerAllStyle.transition = '0ms'
+  bodyClassList.remove('nav-is-open')
+})

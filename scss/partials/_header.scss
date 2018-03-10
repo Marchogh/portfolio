@@ -28,11 +28,105 @@ nav {
 
 }
 
+.menu-button {
+    display: none;
+}
+
+/* Burger menu */
 @include mq-s {
-  ul li a {
-      display: none;
+  .menu-button {
+      position: absolute;
+      top: 4rem;
+      right: 4rem;
+      background: transparent;
+      border: 0;
+      z-index: 99;
+      outline: none;
+  }
+
+  .logo {
+      padding-top: 2rem;
+
+  }
+
+  .menu-button {
+      display: inline-block;
+  }
+
+  header {
+      padding: 0;
   }
 } 
+
+@include mq-s {
+
+    nav {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 10;
+        background: $bg-color;
+
+        transform: translateX(-100%);
+        transition: transform ease-out 250ms;
+        
+    }
+    nav ul {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      width: 100vw;
+      justify-content: center;
+    }
+
+    nav li {
+        padding-bottom: 0.5rem;
+        text-align: center;
+    }
+
+    nav li:hover {
+      background: rgba(#00c9d3, .4);  
+    }
+
+    nav ul li a {
+        display: inline-block;
+        font-size: 2rem;
+        padding: calc(100vh/8) 0;
+        line-height: 0;
+        width: 100%;
+    }
+
+    .close-icon {
+        display: none;
+    }
+
+    .nav-is-open {
+
+       nav {
+           transform: translateX(0);
+       } 
+
+       .container-all {
+           transform: translateX(0);
+           
+       }
+
+       .hamburger {
+           display: none;
+       }
+
+       .close-icon {
+           display: block;
+           outline: none;
+           width: 150%;
+           height: 150%;
+       }
+    }
+
+ 
+  } 
 
 /* Hover nav */
 .hover a::before,
@@ -116,7 +210,8 @@ nav {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-top: 5rem;
+    margin-top: 9rem;
+    margin-left: 2rem;
     letter-spacing: 0.2rem;
     
     animation: glow 9s linear infinite;
@@ -142,8 +237,10 @@ nav {
  .head_undertitle {
     color: #8a8989;
     font-family: $lato;
-    font-size: 1.3rem;
-    padding-top: 2rem;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    width: 70%;
 }
 
 
