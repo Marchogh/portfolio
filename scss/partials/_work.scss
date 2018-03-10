@@ -73,18 +73,15 @@
      /* Position this elements left side away from the left side of the .img-hover-text container by 10% of the .img-hover-text containers width */
     left: 10%;
     padding: 10px;
-    /* Factor padding and border size into declared width */
-    box-sizing: border-box;
     /* Opacity 0 so the element cannot be seen unless user is hovering cursor */
     opacity: 0;
-    /* Round the edges   */
     border-radius: 10px;
-    /* Transition all properties by half a second */
     transition: .5s;
   }
   
   /* :hover pseudo selector used on parent container to then target figcaption child */
-  .portfolio-image:hover figcaption {
+  .portfolio-image:hover figcaption,
+  .portfolio-image:focus figcaption {
     /* Makes the element completely visible */
     opacity: 1;
   }
