@@ -24,6 +24,7 @@
     <meta name="theme-color" content="#000021">
     <title>Marc Høgh - Portfolio</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
 
 </head>
 <body>
@@ -55,10 +56,14 @@
         </button>
 
 
-
+      
         <div class="head_container">
+          <div class="animated fadeInLeft">
         <h1 class="head_title">Frontend developer & designer, jeg laver digitale løsninger</h1>
+      </div>
+      <div class="animated fadeInLeft">
         <h2 class="head_undertitle">Mit navn er Marc Høgh - Multimediedesigner i Aarhus.</h2>
+      </div>
     </div>
 
     <svg  class="arrows" viewBox="0 0 97 93">
@@ -85,13 +90,28 @@
   </section>
 
  <!-- Arbejde -->
- <section class="portfolio" id="portfolio">
+
+  <section class="portfolio">
    <h1 class="portfolio-title">Mit arbejde</h1>
 
    <div class="container-portfolio">
-    <img class="portfolio-image bill" src="images/bills.png" alt="portfolio item">
+    <figure class="portfolio-image bill">
+      <img class="portfolio-img" src="images/bills.png" alt="portfolio Bill's Coffee">
+      <figcaption>
+        <h3 class="fig-title">Bill's Coffee</h3>
+        <p class="portfolio-desc">En Bootstrap hjemmeside for kaffebaren Bill's Coffee</p>
+        <a href="https://beautybyserrani.dk/" class="portfolio-link">Se siden</a>
+      </figcaption>
+      </figure>
 
-    <img class="portfolio-image beauty" src="images/beauty.png" alt="portfolio item">
+      <figure class="portfolio-image beauty">
+        <img class="portfolio-img" src="images/beauty.png" alt="portfolio BeautyBySerrani">
+        <figcaption>
+          <h3 class="fig-title">BeautyBySerrani</h3>
+          <p class="portfolio-desc">Wordpress hjemmeside for Frisør og Makeupartist BeautyBySerrani</p>
+          <a href="https://www.billscoffee.dk/" class="portfolio-link">Se siden</a>
+        </figcaption>
+      </figure>
 
    </div>
  </section>
