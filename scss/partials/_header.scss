@@ -11,6 +11,8 @@ nav a:focus {
 }
 
 nav {
+    position: sticky;
+    top: 35px;
     display: flex;
     justify-content: flex-end;
 
